@@ -9,7 +9,7 @@ model = pickle.load(open('USA_house.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
@@ -24,5 +24,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=8080)
+    app.run(debug=True)
     
