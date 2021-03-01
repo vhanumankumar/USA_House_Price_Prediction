@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>House Price API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>::::Predict USA House Price::::</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Avg. Area Income" placeholder="Avg. Area Income" required="required" />
+		<br>
+		<br>
+        <input type="text" name="Avg. Area House Age" placeholder="Avg. Area House Age" required="required" />
+		<br>
+		<br>
+		<input type="text" name="Avg. Area Number of Rooms" placeholder="Avg. Area Number of Rooms" required="required" />
+		<br>
+		<br>
+		<input type="text" name="Area Population" placeholder="Area Population" required="required" />
+		<br>
+		<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large"><h2>Predict_Price</h2></button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
