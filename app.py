@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-model = pickle.load(open('USA_house.pkl', 'rb'))
+model = pickle.load(open('houseprice.pkl', 'rb'))
 app = Flask(__name__)
 @app.route('/')
 def home():
