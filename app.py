@@ -4,7 +4,7 @@ import pickle
 
 model = pickle.load(open('houseprice.pkl', 'rb'))
 app = Flask(__name__)
-@app.route('/')
+@app.route('/',methods=['POST'])
 def index():
     return render_template('index.html')
 
