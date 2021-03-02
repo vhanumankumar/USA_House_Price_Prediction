@@ -19,7 +19,7 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text='USA House Price Nearly: $ {}'.format(output))
+    return render_template('index.html', prediction_text='Hi USA House Price Nearly: $ {}'.format(output))
 
 
 if __name__ == "__main__":
