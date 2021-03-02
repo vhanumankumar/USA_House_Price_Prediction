@@ -13,20 +13,20 @@
 
 <body>
  <div class="login">
-	<h1>::::Predict USA House Price::::</h1>
+	<h1>::::Predict USA House Price::::By hanuman</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Avg. Area Income" placeholder="Avg. Area Income" required="required" />
+    	<input type="text" name="Avg. Area Income" placeholder="Avg. Area Income Ex:60000" required="required" />
 		<br>
 		<br>
-        <input type="text" name="Avg. Area House Age" placeholder="Avg. Area House Age" required="required" />
+        <input type="text" name="Avg. Area House Age" placeholder="Avg. Area House Age EX:5" required="required" />
 		<br>
 		<br>
-		<input type="text" name="Avg. Area Number of Rooms" placeholder="Avg. Area Number of Rooms" required="required" />
+		<input type="text" name="Avg. Area Number of Rooms" placeholder="Avg. Area Number of Rooms EX:4" required="required" />
 		<br>
 		<br>
-		<input type="text" name="Area Population" placeholder="Area Population" required="required" />
+		<input type="text" name="Area Population" placeholder="Area Population EX:40000" required="required" />
 		<br>
 		<br>
         <button type="submit" class="btn btn-primary btn-block btn-large"><h2>Predict_Price</h2></button>
